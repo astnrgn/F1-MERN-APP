@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Route, Link } from "react-router-dom";
 import Home from "../Home/Home.js";
 import Drivers from "../Drivers/Drivers.js";
+import Add from "../Add/Add.js";
 
 import "./App.css";
 
@@ -43,6 +44,7 @@ class App extends Component {
         <main>
           <Route path="/" exact component={Home} />
           <Route path="/drivers" exact component={Drivers} />
+          <Route path="/drivers/add" exact component={Add} />
         </main>
       </div>
     );
