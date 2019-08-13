@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Route, Link } from "react-router-dom";
 import YouTube from "react-youtube";
+import Home from "../Home/Home.js";
 import Drivers from "../Drivers/Drivers.js";
 
 import "./App.css";
@@ -30,26 +31,19 @@ class App extends Component {
     return (
       <div>
         <nav>
-          <img
-            src="https://i.ndtvimg.com/i/2017-11/f1-logo-2018_827x510_81511713381.png"
-            alt=""
-          />
+          <Link to="/">
+            <img
+              src="https://i.ndtvimg.com/i/2017-11/f1-logo-2018_827x510_81511713381.png"
+              alt=""
+            />
+          </Link>
           <Link to="/drivers">
             <h3>Drivers</h3>
           </Link>
         </nav>
         <main>
-          <Route path="/" exact>
-            <div className="center">
-              <YouTube
-                className="videoDiv"
-                videoId="j2TXtvAetS0"
-                opts={opts}
-                onReady={this._onReady}
-              />
-            </div>
-          </Route>
-          <Route path="/drivers" component={Drivers} />
+          <Route path="/" exact component={Home} />
+          <Route path="/drivers" exact component={Drivers} />
         </main>
       </div>
     );

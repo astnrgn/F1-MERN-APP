@@ -1,0 +1,31 @@
+.drivers {
+  margin-top: 5%;
+  border: 2px solid black;
+  display: flex;
+  justify-content: center;
+}
+.driverDivs {
+  border: 2px solid black;
+  text-align: center;
+  height: 200px;
+  width: 200px;
+}
+.edits {
+  margin-top: 5%;
+  border: 2px solid black;
+  display: flex;
+  justify-content: space-around;
+}
+.editDivs {
+  border: 2px solid black;
+  text-align: center;
+  height: 75px;
+  width: 100px;
+}
+nav a {
+  color: black;
+  display: inline-block;
+  padding: 20px 5px;
+  font-size: 1.8em;
+  text-decoration: none;
+}
