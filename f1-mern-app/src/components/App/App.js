@@ -3,7 +3,7 @@ import { Route, Link } from "react-router-dom";
 import Home from "../Home/Home.js";
 import Drivers from "../Drivers/Drivers.js";
 import Add from "../Add/Add.js";
-
+import Update from "../Update/Update.js";
 import "./App.css";
 
 class App extends Component {
@@ -45,6 +45,7 @@ class App extends Component {
           <Route path="/" exact component={Home} />
           <Route path="/drivers" exact component={Drivers} />
           <Route path="/drivers/add" exact component={Add} />
+          <Route path="/drivers/update" exact component={Update} />
         </main>
       </div>
     );

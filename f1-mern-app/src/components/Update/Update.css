@@ -1,0 +1,23 @@
+.driverTitle {
+  text-align: center;
+  font-size: 30px;
+  font-weight: bolder;
+  margin-top: 3%;
+}
+.extend {
+  width: 1000px;
+  height: 50px;
+  font-size: 40px;
+  border: 2px solid black;
+}
+.formCatagory,
+.submit {
+  font-size: 25px;
+  font-weight: bolder;
+}
+.submit {
+  margin-top: 5%;
+  border: 2px solid black;
+  background: #ff1801;
+  color: white;
+}
