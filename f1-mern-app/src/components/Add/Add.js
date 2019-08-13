@@ -8,28 +8,28 @@ class Add extends Component {
     super(props);
     this.state = {
       name: "",
-      genus: "",
-      image: "",
-      homepage: "",
-      conservation: ""
+      birthplace: "",
+      team: "",
+      rank: "",
+      image: ""
     };
     this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
+    // this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleChange(evt) {
     evt.preventDefault();
     this.setState({ [evt.target.name]: evt.target.value });
   }
-  handleSubmit() {
-    this.props.updateBirds(this.state);
-  }
+  //   handleSubmit() {
+  //     this.props.updateBirds(this.state);
+  //   }
   render() {
     return (
-      <div className="page">
-        <div className="birdGrid">
-          <div className="birds">Add a Driver</div>
-          <div className="name">
+      <div className="form">
+        <div className="driverGrid">
+          <div className="driverTitle">Add a Driver</div>
+          <div className="formCatagory">
             <p>Name</p>
             <input
               className="extend"
@@ -39,7 +39,7 @@ class Add extends Component {
               onChange={this.handleChange}
             />
           </div>
-          <div className="genus">
+          <div className="formCatagory">
             <p>Birthplace</p>
             <input
               className="extend"
@@ -49,7 +49,7 @@ class Add extends Component {
               onChange={this.handleChange}
             />
           </div>
-          <div className="image">
+          <div className="formCatagory">
             <p>Team</p>
             <input
               className="extend"
@@ -59,7 +59,7 @@ class Add extends Component {
               onChange={this.handleChange}
             />
           </div>
-          <div className="homepage">
+          <div className="formCatagory">
             <p>Rank (number)</p>
             <input
               className="extend"
@@ -69,10 +69,10 @@ class Add extends Component {
               onChange={this.handleChange}
             />
           </div>
-          <div className="conservationStatus">
+          <div className="formCatagory">
             <p>Image</p>
             <input
-              className="status"
+              className="extend"
               type="text"
               name="conservation"
               conservation={this.state.conservation}
