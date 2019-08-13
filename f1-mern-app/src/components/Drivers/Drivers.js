@@ -17,16 +17,16 @@ class Drivers extends Component {
         </div>
         <div className="edits">
           <Link to="/drivers/add">
-            <div className="editDivs">
+            <div className="editDivs1">
               <p>Add</p>
             </div>
           </Link>
           <Link to="/drivers/update">
-            <div className="editDivs">
+            <div className="editDivs2">
               <p>Update</p>
             </div>
           </Link>
-          <div className="editDivs">
+          <div className="editDivs3">
             <p>Remove</p>
           </div>
         </div>

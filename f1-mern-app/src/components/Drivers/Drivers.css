@@ -16,16 +16,26 @@
   display: flex;
   justify-content: space-around;
 }
-.editDivs {
+.editDivs1,
+.editDivs2,
+.editDivs3 {
   border: 2px solid black;
   text-align: center;
   height: 75px;
   width: 100px;
+  font-size: 25px;
+  font-weight: bolder;
 }
-nav a {
+a {
   color: black;
-  display: inline-block;
-  padding: 20px 5px;
-  font-size: 1.8em;
   text-decoration: none;
+}
+.editDivs1 {
+  background: green;
+}
+.editDivs2 {
+  background: yellow;
+}
+.editDivs3 {
+  background: red;
 }
