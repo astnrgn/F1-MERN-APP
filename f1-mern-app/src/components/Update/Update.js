@@ -26,6 +26,9 @@ class Update extends Component {
     let driverNames = this.props.driverData.map(list => {
       return list;
     });
+    let keyList = Object.keys(this.state);
+    console.log(keyList);
+
     if (driverNames.includes(this.state.name)) {
       axios
         .put(
