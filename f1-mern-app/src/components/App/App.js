@@ -68,6 +68,13 @@ class App extends Component {
               <Update driverData={this.state.drivers} {...routerProps} />
             )}
           />
+          <Route
+            path="/drivers/remove"
+            exact
+            render={routerProps => (
+              <Remove driverData={this.state.drivers} {...routerProps} />
+            )}
+          />
         </main>
       </div>
     );

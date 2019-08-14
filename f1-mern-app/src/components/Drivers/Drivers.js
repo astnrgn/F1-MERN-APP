@@ -47,9 +47,11 @@ class Drivers extends Component {
       <div>
         <div>
           <div className="edits">
-            <div className="editDivs3">
-              <p>Remove</p>
-            </div>
+            <Link to="/drivers/remove">
+              <div className="editDivs3">
+                <p>Remove</p>
+              </div>
+            </Link>
             <Link to="/drivers/update">
               <div className="editDivs2">
                 <p>Update</p>
