@@ -7,7 +7,6 @@ import Add from "../Add/Add.js";
 import Update from "../Update/Update.js";
 import "./App.css";
 
-const proxyUrl = "https://cors-anywhere.herokuapp.com/";
 const searchUrl = "https://f1-mern-app-api.herokuapp.com";
 
 class App extends Component {
@@ -19,7 +18,7 @@ class App extends Component {
   }
   componentDidMount() {
     axios
-      .get(`${searchUrl}`)
+      .get(searchUrl)
       .then(response => {
         this.setState({
           drivers: response.data
@@ -54,7 +53,13 @@ class App extends Component {
         </nav>
         <main>
           <Route path="/" exact component={Home} />
-          <Route path="/drivers" exact component={Drivers} />
+          <Route
+            path="/drivers"
+            exact
+            render={routerProps => (
+              <Drivers driverData={this.state.drivers} {...routerProps} />
+            )}
+          />
           <Route path="/drivers/add" exact component={Add} />
           <Route path="/drivers/update" exact component={Update} />
         </main>

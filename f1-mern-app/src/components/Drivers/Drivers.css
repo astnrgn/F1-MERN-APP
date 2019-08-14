@@ -1,20 +1,12 @@
 .drivers {
   margin-top: 5%;
-  border: 2px solid black;
-  display: flex;
-  justify-content: center;
-}
-.driverDivs {
-  border: 2px solid black;
-  text-align: center;
-  height: 200px;
-  width: 200px;
 }
 .edits {
   margin-top: 5%;
   border: 2px solid black;
   display: flex;
   justify-content: space-around;
+  flex-direction: column;
 }
 .editDivs1,
 .editDivs2,
@@ -39,37 +31,13 @@ a {
 .editDivs3 {
   background: red;
 }
-
-/* 
-.birdcontain {
+.driverGrid {
+  border: 1px solid black;
+  margin-top: 2%;
+  display: grid;
+  grid-template-columns: 25% 25% 25%;
+  grid-template-rows: 50% 50%;
   height: 50vh;
   width: 80vw;
-  display: grid;
-  grid-template-columns: 25% 25% 25% 25%;
-  grid-template-rows: 50% 50%;
+  justify-content: center;
 }
-
-import React, { Component } from "react";
-import { Route, Link } from "react-router-dom";
-import "./App.css";
-
-class Bird extends Component {
-  render() {
-    let birdsimages = this.props.birds.map((eachbird, i) => {
-      return (
-        <div
-          key={i}
-          class="birdimg"
-          style={{ backgroundImage: `url(${eachbird.image})` }}
-        >
-          <Link to={"/birddetail/" + eachbird.name}>
-            <h3>{eachbird.name}</h3>
-          </Link>
-        </div>
-      );
-    });
-    return <div class="birdcontain test">{birdsimages}</div>;
-  }
-}
-
-export default Bird; */
