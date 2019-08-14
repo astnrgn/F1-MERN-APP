@@ -24,17 +24,23 @@ class Update extends Component {
 
   handleSubmit() {
     let driverNames = this.props.driverData.map(list => {
-      return list;
+      return list.name;
     });
+
     let keyList = Object.keys(this.state);
     console.log(keyList);
 
+    console.log(driverNames);
+
+    const apiUrl = "https://f1-mern-app-api.herokuapp.com/";
+    const driver = this.state.name;
+    const url = `${apiUrl}${driver}`;
+
+    console.log(this.state);
+
     if (driverNames.includes(this.state.name)) {
       axios
-        .put(
-          `"https://f1-mern-app-api.herokuapp.com/" + ${this.state.name}`,
-          this.state
-        )
+        .put(url, this.state)
         .then(response => {
           console.log(response);
         })
@@ -55,7 +61,7 @@ class Update extends Component {
               className="extend"
               type="text"
               name="name"
-              name={this.state.name}
+              // name={this.state.name}
               onChange={this.handleChange}
             />
           </div>
@@ -64,8 +70,8 @@ class Update extends Component {
             <input
               className="extend"
               type="text"
-              name="genus"
-              genus={this.state.genus}
+              name="birthplace"
+              // birthplace={this.state.birthplace}
               onChange={this.handleChange}
             />
           </div>
@@ -74,8 +80,8 @@ class Update extends Component {
             <input
               className="extend"
               type="text"
-              name="image"
-              image={this.state.image}
+              name="team"
+              // team={this.state.team}
               onChange={this.handleChange}
             />
           </div>
@@ -84,8 +90,8 @@ class Update extends Component {
             <input
               className="extend"
               type="text"
-              name="homepage"
-              homepage={this.state.homepage}
+              name="rank"
+              // rank={this.state.rank}
               onChange={this.handleChange}
             />
           </div>
@@ -94,8 +100,8 @@ class Update extends Component {
             <input
               className="extend"
               type="text"
-              name="conservation"
-              conservation={this.state.conservation}
+              name="image"
+              // image={this.state.image}
               onChange={this.handleChange}
             />
           </div>
