@@ -39,3 +39,37 @@ a {
 .editDivs3 {
   background: red;
 }
+
+/* 
+.birdcontain {
+  height: 50vh;
+  width: 80vw;
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-rows: 50% 50%;
+}
+
+import React, { Component } from "react";
+import { Route, Link } from "react-router-dom";
+import "./App.css";
+
+class Bird extends Component {
+  render() {
+    let birdsimages = this.props.birds.map((eachbird, i) => {
+      return (
+        <div
+          key={i}
+          class="birdimg"
+          style={{ backgroundImage: `url(${eachbird.image})` }}
+        >
+          <Link to={"/birddetail/" + eachbird.name}>
+            <h3>{eachbird.name}</h3>
+          </Link>
+        </div>
+      );
+    });
+    return <div class="birdcontain test">{birdsimages}</div>;
+  }
+}
+
+export default Bird; */

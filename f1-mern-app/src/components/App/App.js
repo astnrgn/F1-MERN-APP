@@ -1,24 +1,35 @@
 import React, { Component } from "react";
 import { Route, Link } from "react-router-dom";
+import axios from "axios";
 import Home from "../Home/Home.js";
 import Drivers from "../Drivers/Drivers.js";
 import Add from "../Add/Add.js";
 import Update from "../Update/Update.js";
 import "./App.css";
 
+const proxyUrl = "https://cors-anywhere.herokuapp.com/";
+const searchUrl = "https://f1-mern-app-api.herokuapp.com";
+
 class App extends Component {
-  // constructor(props) {
-  //   super(props);
-  //   this.state = {
-  //     price: null
-  //   };
-  //   this.setPrice = this.setPrice.bind(this);
-  // }
-
-  // setPrice(price) {
-  //   this.setState({ price: price });
-  // }
-
+  constructor(props) {
+    super(props);
+    this.state = {
+      drivers: []
+    };
+  }
+  componentDidMount() {
+    axios
+      .get(`${searchUrl}`)
+      .then(response => {
+        this.setState({
+          drivers: response.data
+        });
+        console.log(this.state.drivers);
+      })
+      .catch(err => {
+        console.error(err);
+      });
+  }
   render() {
     const opts = {
       height: "800",
