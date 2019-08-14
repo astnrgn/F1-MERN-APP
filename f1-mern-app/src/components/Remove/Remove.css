@@ -1,0 +1,56 @@
+.form1 {
+  display: flex;
+  justify-content: center;
+}
+.driverGrid3 {
+  display: grid;
+  grid-template-rows: 100px 100px 50px;
+  grid-template-columns: 150px 300px;
+  margin: 5% 0;
+}
+.driverTitle {
+  text-align: center;
+  font-size: 30px;
+  font-weight: bolder;
+  grid-row: 1 / span 1;
+  grid-column: 1 / span 2;
+}
+.name {
+  grid-row: 2 / span 1;
+  grid-column: 1 / span 2;
+}
+.birthplace {
+  grid-row: 3 / span 1;
+  grid-column: 1 / span 2;
+}
+.team {
+  grid-row: 4 / span 1;
+  grid-column: 1 / span 2;
+}
+.rank {
+  grid-row: 5 / span 1;
+  grid-column: 1 / span 2;
+}
+.image {
+  grid-row: 6 / span 1;
+  grid-column: 1 / span 2;
+}
+.formCatagory,
+.submit {
+  font-size: 25px;
+  font-weight: bolder;
+}
+.extend {
+  width: 500px;
+  height: 50px;
+  font-size: 25px;
+  border: 2px solid black;
+}
+.submit {
+  margin-top: 5%;
+  border: 2px solid black;
+  background: #ff1801;
+  color: white;
+  grid-row: 7 / span 1;
+  grid-column: 1 / span 1;
+}

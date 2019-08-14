@@ -5,6 +5,7 @@ import Home from "../Home/Home.js";
 import Drivers from "../Drivers/Drivers.js";
 import Add from "../Add/Add.js";
 import Update from "../Update/Update.js";
+import Remove from "../Remove/Remove.js";
 import "./App.css";
 
 const searchUrl = "https://f1-mern-app-api.herokuapp.com";
