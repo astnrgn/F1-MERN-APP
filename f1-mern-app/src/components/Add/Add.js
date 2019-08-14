@@ -10,20 +10,27 @@ class Add extends Component {
       name: "",
       birthplace: "",
       team: "",
-      rank: "",
+      rank: 1,
       image: ""
     };
     this.handleChange = this.handleChange.bind(this);
-    // this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleChange(evt) {
     evt.preventDefault();
     this.setState({ [evt.target.name]: evt.target.value });
   }
-  //   handleSubmit() {
-  //     this.props.updateBirds(this.state);
-  //   }
+  handleSubmit() {
+    axios
+      .post("https://f1-mern-app-api.herokuapp.com", this.state)
+      .then(response => {
+        console.log(response);
+      })
+      .catch(err => {
+        console.error(err);
+      });
+  }
   render() {
     return (
       <div className="form1">
@@ -44,7 +51,7 @@ class Add extends Component {
             <input
               className="extend"
               type="text"
-              name="genus"
+              name="birthplace"
               genus={this.state.genus}
               onChange={this.handleChange}
             />
@@ -54,7 +61,7 @@ class Add extends Component {
             <input
               className="extend"
               type="text"
-              name="image"
+              name="team"
               image={this.state.image}
               onChange={this.handleChange}
             />
@@ -64,7 +71,7 @@ class Add extends Component {
             <input
               className="extend"
               type="text"
-              name="homepage"
+              name="rank"
               homepage={this.state.homepage}
               onChange={this.handleChange}
             />
@@ -74,7 +81,7 @@ class Add extends Component {
             <input
               className="extend"
               type="text"
-              name="conservation"
+              name="image"
               conservation={this.state.conservation}
               onChange={this.handleChange}
             />
