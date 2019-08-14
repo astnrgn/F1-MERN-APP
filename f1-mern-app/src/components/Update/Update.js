@@ -14,16 +14,33 @@ class Update extends Component {
       image: ""
     };
     this.handleChange = this.handleChange.bind(this);
-    // this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleChange(evt) {
     evt.preventDefault();
     this.setState({ [evt.target.name]: evt.target.value });
   }
-  //   handleSubmit() {
-  //     this.props.updateBirds(this.state);
-  //   }
+
+  handleSubmit() {
+    let driverNames = this.props.driverData.map(list => {
+      return list;
+    });
+    if (driverNames.includes(this.state.name)) {
+      axios
+        .put(
+          `"https://f1-mern-app-api.herokuapp.com/" + ${this.state.name}`,
+          this.state
+        )
+        .then(response => {
+          console.log(response);
+        })
+        .catch(err => {
+          console.error(err);
+        });
+    }
+  }
+
   render() {
     return (
       <div className="form">
