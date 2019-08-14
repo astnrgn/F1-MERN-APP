@@ -26,17 +26,25 @@ class Update extends Component {
     let driverNames = this.props.driverData.map(list => {
       return list.name;
     });
-    console.log(driverNames);
+
+    let keyList = Object.keys(this.state);
+    let temp = {};
+    console.log(keyList);
+    keyList.forEach(key => {
+      console.log(this.state[key]);
+      if (!(this.state[key] === "")) {
+        temp[key] = this.state[key];
+      }
+    });
+    console.log(temp);
 
     const apiUrl = "https://f1-mern-app-api.herokuapp.com/";
     const driver = this.state.name;
     const url = `${apiUrl}${driver}`;
 
-    console.log(this.state);
-
     if (driverNames.includes(this.state.name)) {
       axios
-        .put(url, this.state)
+        .put(url, temp)
         .then(response => {
           console.log(response);
         })
