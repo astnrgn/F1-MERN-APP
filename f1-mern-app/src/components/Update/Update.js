@@ -48,7 +48,7 @@ class Update extends Component {
 
   render() {
     return (
-      <div className="form">
+      <div className="form2">
         <div className="driverGrid3">
           <div className="driverTitle">Update a Driver</div>
           <div className="name">
@@ -71,7 +71,7 @@ class Update extends Component {
               onChange={this.handleChange}
             />
           </div>
-          <div className="team">
+          <div className="team2">
             <p>Team</p>
             <input
               className="extend"
