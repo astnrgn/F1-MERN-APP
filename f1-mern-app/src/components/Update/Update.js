@@ -27,9 +27,9 @@ class Update extends Component {
   render() {
     return (
       <div className="form">
-        <div className="driverGrid">
+        <div className="driverGrid3">
           <div className="driverTitle">Update a Driver</div>
-          <div className="formCatagory">
+          <div className="name">
             <p>Name</p>
             <input
               className="extend"
@@ -39,7 +39,7 @@ class Update extends Component {
               onChange={this.handleChange}
             />
           </div>
-          <div className="formCatagory">
+          <div className="birthplace">
             <p>Birthplace</p>
             <input
               className="extend"
@@ -49,7 +49,7 @@ class Update extends Component {
               onChange={this.handleChange}
             />
           </div>
-          <div className="formCatagory">
+          <div className="team">
             <p>Team</p>
             <input
               className="extend"
@@ -59,7 +59,7 @@ class Update extends Component {
               onChange={this.handleChange}
             />
           </div>
-          <div className="formCatagory">
+          <div className="rank">
             <p>Rank (number)</p>
             <input
               className="extend"
@@ -69,7 +69,7 @@ class Update extends Component {
               onChange={this.handleChange}
             />
           </div>
-          <div className="formCatagory">
+          <div className="image">
             <p>Image</p>
             <input
               className="extend"

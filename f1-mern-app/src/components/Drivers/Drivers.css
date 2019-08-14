@@ -2,10 +2,8 @@
   margin-top: 5%;
 }
 .edits {
-  margin-top: 5%;
-  border: 2px solid black;
+  position: absolute;
   display: flex;
-  justify-content: space-around;
   flex-direction: column;
 }
 .editDivs1,
@@ -17,6 +15,7 @@
   width: 100px;
   font-size: 25px;
   font-weight: bolder;
+  margin: 50% 0;
 }
 a {
   color: black;
@@ -32,7 +31,6 @@ a {
   background: red;
 }
 .driverGrid {
-  border: 1px solid black;
   margin-top: 2%;
   display: grid;
   grid-template-columns: 25% 25% 25%;
@@ -40,4 +38,24 @@ a {
   height: 50vh;
   width: 80vw;
   justify-content: center;
+}
+.textContainer {
+  transition: 0.4s ease;
+  opacity: 0;
+  position: relative;
+  background: white;
+  padding: 20% 0;
+}
+.driverDivs:hover {
+  opacity: 0.75;
+  border: 2px solid #f9f9f9;
+}
+.driverDivs:hover .textContainer {
+  opacity: 1;
+}
+.text {
+  font-size: 14px;
+}
+.description {
+  font-weight: bolder;
 }
