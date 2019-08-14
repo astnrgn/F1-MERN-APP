@@ -5,7 +5,7 @@ import "./Drivers.css";
 class Drivers extends Component {
   render() {
     let drivers = this.props.driverData.map((driver, index) => {
-      if (index <= 5) {
+      if (index >= 6) {
         return (
           <div
             className="driverDivs"
