@@ -33,7 +33,7 @@ class Add extends Component {
   }
   render() {
     return (
-      <div className="form1">
+      <div className="form">
         <div className="driverGrid2">
           <div className="driverTitle">Add a Driver</div>
           <div className="name">
