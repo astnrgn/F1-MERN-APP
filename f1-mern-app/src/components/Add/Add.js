@@ -3,7 +3,7 @@ import axios from "axios";
 import "./Add.css";
 import { createNewRacer } from "../../actions/racer";
 
-class Add extends Component {
+export default class Add extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -21,7 +21,7 @@ class Add extends Component {
     evt.preventDefault();
     this.setState({ [evt.target.name]: evt.target.value });
   }
-  handleSubmit() {
+  handleSubmit(evt) {
     // axios
     //   .post("https://f1-mern-app-api.herokuapp.com", this.state)
     //   .then(response => {
@@ -31,15 +31,13 @@ class Add extends Component {
     //     console.error(err);
     //   });
 
-    this.props.dispatch(
-      createNewRacer(
-        this.name,
-        this.birthplace,
-        this.team,
-        this.rank,
-        this.image
-      )
-    );
+    let name = this.state.name;
+    let birthplace = this.state.birthplace;
+    let team = this.state.team;
+    let rank = this.state.rank;
+    let image = this.state.image;
+
+    this.props.dispatch(createNewRacer(name, birthplace, team, rank, image));
   }
   render() {
     return (
@@ -52,7 +50,7 @@ class Add extends Component {
               className="extend"
               type="text"
               name="name"
-              name={this.state.name}
+              // name={this.state.name}
               onChange={this.handleChange}
             />
           </div>
@@ -62,7 +60,7 @@ class Add extends Component {
               className="extend"
               type="text"
               name="birthplace"
-              genus={this.state.genus}
+              // genus={this.state.genus}
               onChange={this.handleChange}
             />
           </div>
@@ -72,7 +70,7 @@ class Add extends Component {
               className="extend"
               type="text"
               name="team"
-              image={this.state.image}
+              // image={this.state.image}
               onChange={this.handleChange}
             />
           </div>
@@ -82,7 +80,7 @@ class Add extends Component {
               className="extend"
               type="text"
               name="rank"
-              homepage={this.state.homepage}
+              // homepage={this.state.homepage}
               onChange={this.handleChange}
             />
           </div>
@@ -92,7 +90,7 @@ class Add extends Component {
               className="extend"
               type="text"
               name="image"
-              conservation={this.state.conservation}
+              // conservation={this.state.conservation}
               onChange={this.handleChange}
             />
           </div>
@@ -107,5 +105,3 @@ class Add extends Component {
     );
   }
 }
-
-export default Add;

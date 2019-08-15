@@ -8,28 +8,30 @@ import Update from "../Update/Update.js";
 import Remove from "../Remove/Remove.js";
 import "./App.css";
 
+import RacerDisplay from "../../containers/RacerDisplay";
+
 const searchUrl = "https://f1-mern-app-api.herokuapp.com";
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      drivers: []
+      // drivers: []
     };
   }
-  componentDidMount() {
-    axios
-      .get(searchUrl)
-      .then(response => {
-        this.setState({
-          drivers: response.data
-        });
-        console.log(this.state.drivers);
-      })
-      .catch(err => {
-        console.error(err);
-      });
-  }
+  // componentDidMount() {
+  //   axios
+  //     .get(searchUrl)
+  //     .then(response => {
+  //       this.setState({
+  //         drivers: response.data
+  //       });
+  //       console.log(this.state.drivers);
+  //     })
+  //     .catch(err => {
+  //       console.error(err);
+  //     });
+  // }
   render() {
     const opts = {
       height: "800",
@@ -53,27 +55,41 @@ class App extends Component {
           </Link>
         </nav>
         <main>
+          {/* <Route path="/" exact component={Home} /> */}
+
           <Route path="/" exact component={Home} />
-          <Route
+          <Route path="/drivers" exact component={RacerDisplay} />
+          {/* <Route
             path="/drivers"
             exact
             render={routerProps => (
-              <Drivers driverData={this.state.drivers} {...routerProps} />
+              // <Drivers driverData={this.state.drivers} {...routerProps} />
+              <Drivers driverData={this.state.racers} {...routerProps} />
             )}
-          />
+          /> */}
+          {/* <Route
+            path="/drivers"
+            exact
+            render={routerProps => (
+              // <Drivers driverData={this.state.drivers} {...routerProps} />
+              <Drivers driverData={this.state.racers} {...routerProps} />
+            )}
+          /> */}
           <Route path="/drivers/add" exact component={Add} />
           <Route
             path="/drivers/update"
             exact
             render={routerProps => (
-              <Update driverData={this.state.drivers} {...routerProps} />
+              // <Update driverData={this.state.drivers} {...routerProps} />
+              <Update driverData={this.state.racers} {...routerProps} />
             )}
           />
           <Route
             path="/drivers/remove"
             exact
             render={routerProps => (
-              <Remove driverData={this.state.drivers} {...routerProps} />
+              // <Remove driverData={this.state.drivers} {...routerProps} />
+              <Remove driverData={this.state.racers} {...routerProps} />
             )}
           />
         </main>
