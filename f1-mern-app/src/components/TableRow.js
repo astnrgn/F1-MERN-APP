@@ -11,13 +11,13 @@ const TableRow = ({
   onClick = () => {}
 }) => (
   <div>
-    <div>
+    <div className="contain">
       <div
         className="driverDivs"
         style={{
           backgroundImage: `url(${image})`,
           backgroundPosition: "center",
-          backgroundSize: "250px 250px",
+          backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
           position: "relative",
           textAlign: "center"
@@ -44,19 +44,24 @@ const TableRow = ({
           </div>
         </div>
       </div>
-      <td>
-        <input onChange={onChange} name="quantity" type="text" value={name} />
-      </td>
-      <td>
-        <select onChange={onChange} name="team" value={team}>
-          <option value="Mercades">Mercades</option>
-          <option value="RedBull">RedBull</option>
-          <option value="Ferrari">Ferrari</option>
-        </select>
-      </td>
-      <td>
-        <button onClick={onClick}>X</button>
-      </td>
+
+      <select
+        className="teamChanger"
+        onChange={onChange}
+        name="team"
+        value={team}
+      >
+        <option value="Mercades">Mercades</option>
+        <option value="Red Bull">Red Bull</option>
+        <option value="Ferrari">Ferrari</option>
+        <option value="McLaren">McLaren</option>
+        <option value="Toro Rosso">Toro Rosso</option>
+        <option value="Renault">Renault</option>
+      </select>
+
+      <button className="delete" onClick={onClick}>
+        X
+      </button>
     </div>
   </div>
 );

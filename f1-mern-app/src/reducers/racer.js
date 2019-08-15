@@ -43,7 +43,7 @@ const racers = [
     team: "Toro Rosso",
     rank: 6,
     image:
-      "https://www.formula1.com/content/fom-website/en/drivers/pierre-gasly/_jcr_content/image.img.1024.medium.jpg/1554818858495.jpg"
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSalBdaw9BDFzHn439PFEGrM3oDU2bzTkywprt1UfT_c3dfpdOP"
   }
 ];
 

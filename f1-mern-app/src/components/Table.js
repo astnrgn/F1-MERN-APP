@@ -1,13 +1,11 @@
 import React from "react";
-// import "./Table.css";
+import "./Table.css";
 
-const Table = ({ children = {} }) =>
-  children.length > 0 ? (
-    <table className="Table">
-      <tbody className="grid">{children}</tbody>
-    </table>
-  ) : (
-    <p className="NoDrivers">No drivers</p>
-  );
+const Table = ({ children }) => <div className="grid5">{children}</div>;
+// children.length > 0 ? (
+//   <div className="grid5">{children}</div>
+// ) : (
+//   <p className="NoDrivers">No drivers</p>
+// );
 
 export default Table;
