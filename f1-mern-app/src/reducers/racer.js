@@ -67,7 +67,7 @@ export default function racerReducer(state = DEFAULT_STATE, action) {
           }
           return {
             ...racer,
-            ...action.payload.updatedOrder
+            ...action.payload.updatedRacer
           };
         })
       };

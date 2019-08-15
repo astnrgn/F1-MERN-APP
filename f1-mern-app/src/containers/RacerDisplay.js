@@ -3,7 +3,7 @@ import React from "react";
 // import Table from "../components/Table";
 // import TableRow from "../components/TableRow";
 import { connect } from "react-redux";
-import { createNewRacer, deleteRacer } from "../actions/racer";
+import { createNewRacer, deleteRacer, updateRacer } from "../actions/racer";
 import Drivers from "../components/Drivers/Drivers";
 import Table from "../components/Table";
 import TableRow from "../components/TableRow";
@@ -41,8 +41,8 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = dispatch => ({
   onAdd: (name, birthplace, team, rank, image) =>
     dispatch(createNewRacer(name, birthplace, team, rank, image)),
-  onRemove: id => dispatch(deleteRacer(id))
-  //   onUpdate: (id, update) => dispatch(updateOrder(id, update))
+  onRemove: id => dispatch(deleteRacer(id)),
+  onUpdate: (id, update) => dispatch(updateRacer(id, update))
 });
 
 const RacerDisplay = connect(

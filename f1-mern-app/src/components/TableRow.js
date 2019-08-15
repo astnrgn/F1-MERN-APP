@@ -48,7 +48,7 @@ const TableRow = ({
         <input onChange={onChange} name="quantity" type="text" value={name} />
       </td>
       <td>
-        <select onChange={onChange} name="status" value={team}>
+        <select onChange={onChange} name="team" value={team}>
           <option value="Mercades">Mercades</option>
           <option value="RedBull">RedBull</option>
           <option value="Ferrari">Ferrari</option>
