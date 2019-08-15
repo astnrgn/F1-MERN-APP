@@ -4,7 +4,7 @@ const DEFAULT_STATE = {
   orders: []
 };
 
-export default function orderReducer(state = DEFAULT_STATE, action) {
+export default function racerReducer(state = DEFAULT_STATE, action) {
   switch (action.type) {
     case CREATE_RACER:
       return {
