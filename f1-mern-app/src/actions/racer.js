@@ -1,14 +1,14 @@
 import { CREATE_RACER, UPDATE_RACER, DELETE_RACER } from "../constants/racer";
 
-export function createNewRacer(name, birthplace, team, rank, image) {
+export function createNewRacer(name) {
   return {
     type: CREATE_RACER,
     payload: {
-      name,
-      birthplace,
-      team,
-      rank,
-      image
+      name
+      // birthplace,
+      // team,
+      // rank,
+      // image
     }
   };
 }

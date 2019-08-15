@@ -7,6 +7,7 @@ import Add from "../Add/Add.js";
 import Update from "../Update/Update.js";
 import Remove from "../Remove/Remove.js";
 import "./App.css";
+import NewAddForm from "../../containers/NewAddForm";
 
 import RacerDisplay from "../../containers/RacerDisplay";
 
@@ -58,7 +59,11 @@ class App extends Component {
           {/* <Route path="/" exact component={Home} /> */}
 
           <Route path="/" exact component={Home} />
-          <Route path="/drivers" exact component={RacerDisplay} />
+          <div>
+            <Route path="/drivers" exact component={RacerDisplay} />
+            <Route path="/drivers" exact component={NewAddForm} />
+          </div>
+
           {/* <Route
             path="/drivers"
             exact
