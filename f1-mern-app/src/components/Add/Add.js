@@ -24,6 +24,11 @@ export default class Add extends Component {
   handleSubmit(evt) {
     evt.preventDefault();
     let name = evt.target[0].value;
+    let birthplace = evt.target[1].value;
+    let team = evt.target[2].value;
+    let rank = evt.target[3].value;
+    let image = evt.target[4].value;
+
     // axios
     //   .post("https://f1-mern-app-api.herokuapp.com", this.state)
     //   .then(response => {
@@ -40,9 +45,13 @@ export default class Add extends Component {
     // let image = this.state.image;
 
     // this.props.dispatch(createNewRacer(name, birthplace, team, rank, image));
-    this.props.dispatch(createNewRacer(name));
+    this.props.dispatch(createNewRacer(name, birthplace, team, rank, image));
 
     evt.target[0].value = "";
+    evt.target[1].value = "";
+    evt.target[2].value = "";
+    evt.target[3].value = "";
+    evt.target[4].value = "";
   }
   render() {
     return (
@@ -106,18 +115,32 @@ export default class Add extends Component {
       //       onClick={this.handleSubmit}
       //     />
       //   </div>
+
       <form className="form" onSubmit={this.handleSubmit}>
-        <p>
+        <div>Add a Driver -</div>
+        <div>
           <label>Name:</label>
           <input type="text" />
-        </p>
-        <p>
-          <label>Quantity:</label>
+        </div>
+        <div>
+          <label>Birthplace:</label>
+          <input type="text" />
+        </div>
+        <div>
+          <label>Team:</label>
+          <input type="text" />
+        </div>
+        <div>
+          <label>Rank:</label>
           <input type="number" />
-        </p>
-        <p>
+        </div>
+        <div>
+          <label>Image:</label>
+          <input type="text" />
+        </div>
+        <div>
           <button type="submit">Submit</button>
-        </p>
+        </div>
       </form>
     );
   }

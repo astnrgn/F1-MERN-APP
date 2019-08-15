@@ -3,13 +3,11 @@ import React from "react";
 // import Table from "../components/Table";
 // import TableRow from "../components/TableRow";
 import { connect } from "react-redux";
-import { createNewRacer, deleteRacer, updateRacer } from "../actions/racer";
-import Drivers from "../components/Drivers/Drivers";
+import { deleteRacer, updateRacer } from "../actions/racer";
 import Table from "../components/Table";
 import TableRow from "../components/TableRow";
-import Add from "../components/Add/Add";
 
-const Racers = ({ racers, onAdd, onRemove, onUpdate }) => {
+const Racers = ({ racers, onRemove, onUpdate }) => {
   return (
     // <Drivers driverData={racers} />
     <Table>

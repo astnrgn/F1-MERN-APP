@@ -1,13 +1,13 @@
-.form {
+form {
   display: flex;
   justify-content: center;
 }
-.driverGrid2 {
+/* .driverGrid2 {
   display: grid;
   grid-template-rows: 100px 100px 100px 100px 100px 150px 50px;
   grid-template-columns: 150px 300px;
   margin: 5% 0;
-}
+} */
 .driverTitle {
   text-align: center;
   font-size: 30px;
