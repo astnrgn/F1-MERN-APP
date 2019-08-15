@@ -56,7 +56,7 @@ export default function racerReducer(state = DEFAULT_STATE, action) {
     case CREATE_RACER:
       return {
         ...state,
-        orders: [...state.orders, action.payload]
+        racers: [...state.racers, action.payload]
       };
     case UPDATE_RACER:
       return {

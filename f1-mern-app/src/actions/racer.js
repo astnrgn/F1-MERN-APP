@@ -1,12 +1,14 @@
 import { CREATE_RACER, UPDATE_RACER, DELETE_RACER } from "../constants/racer";
 
-export function createNewRacer(productName, quantity) {
+export function createNewRacer(name, birthplace, team, rank, image) {
   return {
     type: CREATE_RACER,
     payload: {
-      productName,
-      quantity,
-      status: "pending"
+      name,
+      birthplace,
+      team,
+      rank,
+      image
     }
   };
 }

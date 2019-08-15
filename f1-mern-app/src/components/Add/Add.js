@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import "./Add.css";
+import { createNewRacer } from "../../actions/racer";
 
 class Add extends Component {
   constructor(props) {
@@ -21,14 +22,24 @@ class Add extends Component {
     this.setState({ [evt.target.name]: evt.target.value });
   }
   handleSubmit() {
-    axios
-      .post("https://f1-mern-app-api.herokuapp.com", this.state)
-      .then(response => {
-        console.log(response);
-      })
-      .catch(err => {
-        console.error(err);
-      });
+    // axios
+    //   .post("https://f1-mern-app-api.herokuapp.com", this.state)
+    //   .then(response => {
+    //     console.log(response);
+    //   })
+    //   .catch(err => {
+    //     console.error(err);
+    //   });
+
+    this.props.dispatch(
+      createNewRacer(
+        this.name,
+        this.birthplace,
+        this.team,
+        this.rank,
+        this.image
+      )
+    );
   }
   render() {
     return (
