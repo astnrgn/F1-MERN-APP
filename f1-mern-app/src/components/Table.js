@@ -4,10 +4,10 @@ import React from "react";
 const Table = ({ children = {} }) =>
   children.length > 0 ? (
     <table className="Table">
-      <tbody>{children}</tbody>
+      <tbody className="grid">{children}</tbody>
     </table>
   ) : (
-    <p className="NoData">No orders</p>
+    <p className="NoDrivers">No drivers</p>
   );
 
 export default Table;

@@ -3,7 +3,7 @@ import React from "react";
 // import Table from "../components/Table";
 // import TableRow from "../components/TableRow";
 import { connect } from "react-redux";
-import { createNewRacer } from "../actions/racer";
+import { createNewRacer, deleteRacer } from "../actions/racer";
 import Drivers from "../components/Drivers/Drivers";
 import Table from "../components/Table";
 import TableRow from "../components/TableRow";
@@ -16,6 +16,10 @@ const Racers = ({ racers, onAdd, onRemove, onUpdate }) => {
         <TableRow
           key={i}
           {...d}
+          onChange={e => {
+            e.preventDefault();
+            onAdd(i, { [e.target.name]: e.target.value });
+          }}
           onClick={e => {
             e.preventDefault();
             onRemove(i);
@@ -37,7 +41,7 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = dispatch => ({
   onAdd: (name, birthplace, team, rank, image) =>
     dispatch(createNewRacer(name, birthplace, team, rank, image)),
-  onRemove: id => dispatch(createNewRacer(id))
+  onRemove: id => dispatch(deleteRacer(id))
   //   onUpdate: (id, update) => dispatch(updateOrder(id, update))
 });
 

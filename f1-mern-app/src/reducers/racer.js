@@ -61,12 +61,12 @@ export default function racerReducer(state = DEFAULT_STATE, action) {
     case UPDATE_RACER:
       return {
         ...state,
-        orders: state.orders.map((order, index) => {
+        racers: state.racers.map((racer, index) => {
           if (index !== action.payload.id) {
-            return order;
+            return racer;
           }
           return {
-            ...order,
+            ...racer,
             ...action.payload.updatedOrder
           };
         })
@@ -74,7 +74,7 @@ export default function racerReducer(state = DEFAULT_STATE, action) {
     case DELETE_RACER:
       return {
         ...state,
-        orders: state.orders.filter((order, id) => {
+        racers: state.racers.filter((racer, id) => {
           return id !== action.payload;
         })
       };
