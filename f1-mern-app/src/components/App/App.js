@@ -59,9 +59,15 @@ class App extends Component {
           {/* <Route path="/" exact component={Home} /> */}
 
           <Route path="/" exact component={Home} />
-          <div>
-            <Route path="/drivers" exact component={RacerDisplay} />
-            <Route path="/drivers" exact component={NewAddForm} />
+          <div className="appCenter">
+            <div className="appGrid">
+              <div className="driversCenter">
+                <Route path="/drivers" exact component={RacerDisplay} />
+              </div>
+              <div className="newDrivers">
+                <Route path="/drivers" exact component={NewAddForm} />
+              </div>
+            </div>
           </div>
 
           {/* <Route
