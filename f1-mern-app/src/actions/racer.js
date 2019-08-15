@@ -13,10 +13,10 @@ export function createNewRacer(productName, quantity) {
 
 export const deleteRacer = id => ({ type: DELETE_RACER, payload: id });
 
-export const updateRacer = (id, updatedOrder) => ({
+export const updateRacer = (id, updatedRacer) => ({
   type: UPDATE_RACER,
   payload: {
     id,
-    updatedOrder
+    updatedRacer
   }
 });
