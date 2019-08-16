@@ -1,8 +1,6 @@
 import React, { Component } from "react";
 import { Route, Link } from "react-router-dom";
-import axios from "axios";
 import Home from "../Home/Home.js";
-import Drivers from "../Drivers/Drivers.js";
 import Add from "../Add/Add.js";
 import Update from "../Update/Update.js";
 import Remove from "../Remove/Remove.js";
@@ -11,37 +9,8 @@ import NewAddForm from "../../containers/NewAddForm";
 
 import RacerDisplay from "../../containers/RacerDisplay";
 
-const searchUrl = "https://f1-mern-app-api.herokuapp.com";
-
 class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      // drivers: []
-    };
-  }
-  // componentDidMount() {
-  //   axios
-  //     .get(searchUrl)
-  //     .then(response => {
-  //       this.setState({
-  //         drivers: response.data
-  //       });
-  //       console.log(this.state.drivers);
-  //     })
-  //     .catch(err => {
-  //       console.error(err);
-  //     });
-  // }
   render() {
-    const opts = {
-      height: "800",
-      width: "1200",
-      playerVars: {
-        // https://developers.google.com/youtube/player_parameters
-        autoplay: 1
-      }
-    };
     return (
       <div>
         <nav>
@@ -56,8 +25,6 @@ class App extends Component {
           </Link>
         </nav>
         <main>
-          {/* <Route path="/" exact component={Home} /> */}
-
           <Route path="/" exact component={Home} />
           <div className="appCenter">
             <div className="appGrid">
@@ -69,29 +36,11 @@ class App extends Component {
               </div>
             </div>
           </div>
-
-          {/* <Route
-            path="/drivers"
-            exact
-            render={routerProps => (
-              // <Drivers driverData={this.state.drivers} {...routerProps} />
-              <Drivers driverData={this.state.racers} {...routerProps} />
-            )}
-          /> */}
-          {/* <Route
-            path="/drivers"
-            exact
-            render={routerProps => (
-              // <Drivers driverData={this.state.drivers} {...routerProps} />
-              <Drivers driverData={this.state.racers} {...routerProps} />
-            )}
-          /> */}
           <Route path="/drivers/add" exact component={Add} />
           <Route
             path="/drivers/update"
             exact
             render={routerProps => (
-              // <Update driverData={this.state.drivers} {...routerProps} />
               <Update driverData={this.state.racers} {...routerProps} />
             )}
           />
@@ -99,7 +48,6 @@ class App extends Component {
             path="/drivers/remove"
             exact
             render={routerProps => (
-              // <Remove driverData={this.state.drivers} {...routerProps} />
               <Remove driverData={this.state.racers} {...routerProps} />
             )}
           />

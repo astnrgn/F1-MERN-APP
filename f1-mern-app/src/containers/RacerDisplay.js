@@ -1,7 +1,4 @@
 import React from "react";
-
-// import Table from "../components/Table";
-// import TableRow from "../components/TableRow";
 import { connect } from "react-redux";
 import { deleteRacer, updateRacer } from "../actions/racer";
 import Table from "../components/Table";
@@ -9,7 +6,6 @@ import TableRow from "../components/TableRow";
 
 const Racers = ({ racers, onRemove, onUpdate }) => {
   return (
-    // <Drivers driverData={racers} />
     <Table>
       {racers.map((d, i) => (
         <TableRow
