@@ -19,11 +19,6 @@ nav img {
   display: inline-block;
   vertical-align: middle;
 }
-nav h1 {
-  margin: 0;
-  display: inline-block;
-  vertical-align: middle;
-}
 nav a {
   color: #ff1801;
   display: inline-block;
@@ -34,21 +29,9 @@ nav a {
 nav a:hover {
   background: black;
 }
-main {
-  display: flex;
-  justify-content: center;
-}
-.appCenter {
-  display: flex;
-  justify-content: center;
-}
 .appGrid {
   display: grid;
 }
 .driversCenter {
   grid-row: 2 / span 1;
-}
-.newDrivers {
-  display: flex;
-  justify-content: center;
 }

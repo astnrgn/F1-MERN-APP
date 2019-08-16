@@ -1,13 +1,9 @@
 import React, { Component } from "react";
 import { Route, Link } from "react-router-dom";
 import Home from "../Home/Home.js";
-import Add from "../Add/Add.js";
-import Update from "../Update/Update.js";
-import Remove from "../Remove/Remove.js";
-import "./App.css";
 import NewAddForm from "../../containers/NewAddForm";
-
 import RacerDisplay from "../../containers/RacerDisplay";
+import "./App.css";
 
 class App extends Component {
   render() {
@@ -36,21 +32,6 @@ class App extends Component {
               </div>
             </div>
           </div>
-          <Route path="/drivers/add" exact component={Add} />
-          <Route
-            path="/drivers/update"
-            exact
-            render={routerProps => (
-              <Update driverData={this.state.racers} {...routerProps} />
-            )}
-          />
-          <Route
-            path="/drivers/remove"
-            exact
-            render={routerProps => (
-              <Remove driverData={this.state.racers} {...routerProps} />
-            )}
-          />
         </main>
       </div>
     );

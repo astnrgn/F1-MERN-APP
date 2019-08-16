@@ -2,7 +2,6 @@ main {
   display: flex;
   justify-content: center;
 }
-
 .videoDiv {
   border-left: 2px solid black;
   border-right: 2px solid black;
