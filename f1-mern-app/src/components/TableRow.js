@@ -20,7 +20,8 @@ const TableRow = ({
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
           position: "relative",
-          textAlign: "center"
+          textAlign: "center",
+          border: "2px solid black"
         }}
       >
         <div className="textContainer">
@@ -57,6 +58,10 @@ const TableRow = ({
         <option value="McLaren">McLaren</option>
         <option value="Toro Rosso">Toro Rosso</option>
         <option value="Renault">Renault</option>
+        <option value="Haas">Haas</option>
+        <option value="McLaren">McLaren</option>
+        <option value="Racing Point">Racing Point</option>
+        <option value="Williams">Williams</option>
       </select>
 
       <button className="delete" onClick={onClick}>
