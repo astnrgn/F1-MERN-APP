@@ -39,29 +39,33 @@ export default class Add extends Component {
   render() {
     return (
       <form className="form" onSubmit={this.handleSubmit}>
-        <div>Add a Driver -</div>
-        <div>
-          <label>Name:</label>
-          <input type="text" />
-        </div>
-        <div>
-          <label>Birthplace:</label>
-          <input type="text" />
-        </div>
-        <div>
-          <label>Team:</label>
-          <input type="text" />
-        </div>
-        <div>
-          <label>Rank:</label>
-          <input type="number" />
-        </div>
-        <div>
-          <label>Image:</label>
-          <input type="text" />
-        </div>
-        <div>
-          <button type="submit">Submit</button>
+        <div classname="centerFlex">
+          <div className="formGrid">
+            <div className="driverTitle">Add a Driver</div>
+            <div className="name">
+              <label>Name:</label>
+              <input className="inputField" type="text" />
+            </div>
+            <div className="birthplace">
+              <label>Birthplace:</label>
+              <input className="inputField" type="text" />
+            </div>
+            <div className="team">
+              <label>Team:</label>
+              <input className="inputField" type="text" />
+            </div>
+            <div className="rank">
+              <label>Rank:</label>
+              <input className="inputField" type="number" />
+            </div>
+            <div className="image">
+              <label>Image:</label>
+              <input className="inputField" type="text" />
+            </div>
+            <button className="submit" type="submit">
+              Submit
+            </button>
+          </div>
         </div>
       </form>
     );

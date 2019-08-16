@@ -1,57 +1,60 @@
-form {
+.form {
   display: flex;
   justify-content: center;
+  text-align: left;
 }
-/* .driverGrid2 {
+.formGrid {
   display: grid;
-  grid-template-rows: 100px 100px 100px 100px 100px 150px 50px;
-  grid-template-columns: 150px 300px;
-  margin: 5% 0;
-} */
+  grid-template-rows: 50px 50px 50px 50px 50px 50px 50px;
+  grid-template-columns: 200px;
+}
 .driverTitle {
-  text-align: center;
-  font-size: 30px;
+  /* text-align: center; */
+  font-size: 28px;
   font-weight: bolder;
   grid-row: 1 / span 1;
-  grid-column: 1 / span 2;
+  grid-column: 1 / span 1;
 }
 .name {
   grid-row: 2 / span 1;
-  grid-column: 1 / span 2;
+  grid-column: 1 / span 1;
 }
 .birthplace {
   grid-row: 3 / span 1;
-  grid-column: 1 / span 2;
+  grid-column: 1 / span 1;
 }
 .team {
   margin-top: 0%;
   grid-row: 4 / span 1;
-  grid-column: 1 / span 2;
+  grid-column: 1 / span 1;
 }
 .rank {
   grid-row: 5 / span 1;
-  grid-column: 1 / span 2;
+  grid-column: 1 / span 1;
 }
 .image {
   grid-row: 6 / span 1;
-  grid-column: 1 / span 2;
+  grid-column: 1 / span 1;
 }
 .formCatagory,
 .submit {
   font-size: 25px;
   font-weight: bolder;
 }
-.extend {
-  width: 500px;
-  height: 50px;
+.inputField {
+  width: 100%;
+  height: 25px;
   font-size: 25px;
-  border: 2px solid black;
+  border: 1px solid black;
 }
 .submit {
   margin-top: 5%;
   border: 2px solid black;
   background: #ff1801;
-  color: white;
+  color: black;
   grid-row: 7 / span 1;
   grid-column: 1 / span 1;
+}
+label {
+  font-weight: bolder;
 }

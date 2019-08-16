@@ -48,3 +48,7 @@ main {
 .driversCenter {
   grid-row: 2 / span 1;
 }
+.newDrivers {
+  display: flex;
+  justify-content: center;
+}
