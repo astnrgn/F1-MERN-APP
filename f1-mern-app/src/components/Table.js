@@ -1,6 +1,8 @@
 import React from "react";
 import "./Table.css";
 
-const Table = ({ children }) => <div className="grid5">{children}</div>;
+const Table = ({ children }) => (
+  <div className="driverDisplayGrid">{children}</div>
+);
 
 export default Table;
